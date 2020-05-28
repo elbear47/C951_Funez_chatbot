@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+    <pattern>Hello</pattern>
+    <template>Hello I am a Computer Science Career Advisor Bot.
+    Which of the following Job titles interest you?
+    
+        <reply>
+            <text>Data Scientist</text>
+            <postback>chooseDS</postback>
+        </reply>
+    
+        <reply>
+            <text>Software Tester/Developer</text>
+            <postback>chooseST</postback>
+        </reply>
+    
+        <reply>
+            <text>Web Developer</text>
+            <postback>chooseWD</postback>
+        </reply>
+    
+        <reply>
+            <text>Software Engineer</text>
+            <postback>chooseSE</postback>
+        </reply>
+    
+        <reply>
+            <text>Systems Analyst</text>
+            <postback>chooseSA</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseDS</pattern>
+    <template>Would you consider yourself strong in the following:
+    <ol>
+        <li>SQL</li>
+        <li>Understanding of data warehousing/data marts</li>
+        <li>Knowledge of DBMS systems</li>
+    </ol>
+
+        <reply>
+            <text>YES :)</text>
+            <postback>chooseYesSQL</postback>
+        </reply>
+        <reply>
+            <text>NO :(</text>
+            <postback>chooseNoSQL</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseYesSQL</pattern>
+    <template>
+        You will make a great Data Scientist. Click the options to view more about jobs or salary.
+        <button>
+            <text>Jobs</text>
+            <url>http://www.dice.com/jobs?q=data%20science</url>
+        </button>
+        <button>
+            <text>Salary</text>
+            <url>https://www.bls.gov/OOH/computer-and-information-technology/computer-and-information-research-scientists.htm</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseNoSQL</pattern>
+    <template>
+        Consider another Career. To be a Data Scientist. SQL
+        skills are essential! Type 'hello' to restart the career
+        advising process!
+    </template>
+</category>
+
+--------------------ST----------
+<category>
+    <pattern>chooseST</pattern>
+    <template>Would you consider yourself strong in the following:
+    <ol>
+        <li>Strong Programming background</li>
+        <li>Knowledge of software development lifecycle</li>
+        <li>Strong capability of using Chrome dev tools</li>
+    </ol>
+
+        <reply>
+            <text>YES :)</text>
+            <postback>chooseYesST</postback>
+        </reply>
+        <reply>
+            <text>NO :(</text>
+            <postback>chooseNoST</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseYesST</pattern>
+    <template>
+        You will make a great Software Tester/Developer. Click the options to view more about jobs or salary.
+        <button>
+            <text>Jobs</text>
+            <url>http://www.dice.com/jobs?q=software%20tester</url>
+        </button>
+        <button>
+            <text>Salary</text>
+            <url>https://www.bls.gov/OOH/computer-and-information-technology/software-developers.htm</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseNoST</pattern>
+    <template>
+        Consider another Career. To be a Software Tester, 
+        These are essential Skills needed. Type 'hello' to restart
+        the career advising process!
+    </template>
+</category>
+--------------------WD----------
+<category>
+    <pattern>chooseWD</pattern>
+    <template>Would you consider yourself strong in the following:
+    <ol>
+        <li>Interpersonal Skills</li>
+        <li>Search Engine Optimization</li>
+        <li>HTML/CSS</li>
+    </ol>
+
+        <reply>
+            <text>YES :)</text>
+            <postback>chooseYesWD</postback>
+        </reply>
+        <reply>
+            <text>NO :(</text>
+            <postback>chooseNoWD</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseYesWD</pattern>
+    <template>
+        You will make a great Web Developer. Click the options to view more about jobs or salary.
+        <button>
+            <text>Jobs</text>
+            <url>http://www.dice.com/jobs?q=web%20developer</url>
+        </button>
+        <button>
+            <text>Salary</text>
+            <url>https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseNoWD</pattern>
+    <template>
+        Consider another Career. To be a Web Developer, 
+        These are essential Skills needed. Type 'hello' to restart
+        the career advising process!
+    </template>
+</category>
+--------------------SE----------
+<category>
+    <pattern>chooseSE</pattern>
+    <template>Would you consider yourself strong in the following:
+    <ol>
+        <li>Computer programming and coding</li>
+        <li>Attention to detail</li>
+        <li>Teamwork</li>
+    </ol>
+
+        <reply>
+            <text>YES :)</text>
+            <postback>chooseYesSE</postback>
+        </reply>
+        <reply>
+            <text>NO :(</text>
+            <postback>chooseNoSE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseYesSE</pattern>
+    <template>
+        You will make a great Software Engineer. Click the options to view more about jobs or salary.
+        <button>
+            <text>Jobs</text>
+            <url>http://www.dice.com/jobs?q=software%20engineer</url>
+        </button>
+        <button>
+            <text>Salary</text>
+            <url>https://www.bls.gov/OOH/computer-and-information-technology/computer-programmers.htm</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseNoSE</pattern>
+    <template>
+        Consider another Career. To be a Software Engineer, 
+        These are essential Skills needed. Type 'hello' to restart
+        the career advising process!
+    </template>
+</category>
+--------------------SA----------
+<category>
+    <pattern>chooseSA</pattern>
+    <template>Would you consider yourself strong in the following:
+    <ol>
+        <li>Analytical skills</li>
+        <li>Technical skills</li>
+        <li>Able to explain complex issues </li>
+    </ol>
+
+        <reply>
+            <text>YES :)</text>
+            <postback>chooseYesSA</postback>
+        </reply>
+        <reply>
+            <text>NO :(</text>
+            <postback>chooseNoSA</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseYesSA</pattern>
+    <template>
+        You will make a great Systems Analyst. Click the options to view more about jobs or salary.
+        <button>
+            <text>Jobs</text>
+            <url>http://www.dice.com/jobs?q=systems%20analyst</url>
+        </button>
+        <button>
+            <text>Salary</text>
+            <url>https://www.bls.gov/OOH/computer-and-information-technology/computer-systems-analysts.htm</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>chooseNoSA</pattern>
+    <template>
+        Consider another Career. To be a Systems Analyst, 
+        These are essential Skills needed. Type 'hello' to restart
+        the career advising process!
+    </template>
+</category>
+</aiml>
